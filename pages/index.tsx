@@ -9,6 +9,33 @@ export default function Home() {
       >
         Hello World Hover
       </motion.h1>
+      <motion.button
+        className="block mx-auto px-10 py-4 bg-transparent border-4 rounded-xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: 200 }}
+        whileHover={{
+          scale: 1.1,
+          boxShadow: "0px 0px 20px 5px red",
+          textShadow: "0px 0px 20px 20px red",
+        }}
+      >
+        button
+      </motion.button>
+
+      <ul className="w-80 mx-auto text-xl relative top-80">
+        <motion.li className="mb-3" whileHover={{ scale: 1.1, originY: 0.3 }}>
+          Bear
+        </motion.li>
+        <motion.li className="mb-3" whileHover={{ scale: 1.1, originY: 0.3 }}>
+          Monkey
+        </motion.li>
+        <motion.li className="mb-3" whileHover={{ scale: 1.1, originY: 0.3 }}>
+          Elephant
+        </motion.li>
+        <motion.li className="mb-3" whileHover={{ scale: 1.1, originY: 0.3 }}>
+          Hawk
+        </motion.li>
+      </ul>
     </div>
   );
 }
