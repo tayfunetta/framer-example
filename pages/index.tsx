@@ -7,9 +7,14 @@ const buttonVariants = {
   },
   visible: {
     opacity: 1,
-    y: 0,
+    y: 50,
     transition: { delay: 1, duration: 1 },
     // specify the "transition" property within "visible" property
+  },
+  hover: {
+    scale: 1.1,
+    textShadow: "0px 0px 8px rgb(255,255,255)",
+    boxShadow: "0px 0px 8px rgb(255,255,255)",
   },
 };
 
@@ -51,6 +56,7 @@ export default function Home() {
         variants={buttonVariants}
         initial={"initial"}
         animate={"visible"}
+        whileHover="hover"
       >
         button
       </motion.button>
