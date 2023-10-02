@@ -8,6 +8,8 @@ const buttonVariants = {
   visible: {
     opacity: 1,
     y: 0,
+    transition: { delay: 1, duration: 1 },
+    // specify the "transition" property within "visible" property
   },
 };
 
@@ -17,6 +19,8 @@ const pVariants = {
   },
   visible: {
     x: 0,
+    transition: { type: "spring", stiffness: 120 },
+    // specify the "transition" property within "visible" property
   },
 };
 
@@ -28,7 +32,6 @@ export default function Home() {
         variants={buttonVariants}
         initial={"initial"}
         animate={"visible"}
-        transition={{ delay: 1, duration: 1 }}
       >
         button
       </motion.button>
@@ -37,7 +40,6 @@ export default function Home() {
         variants={pVariants}
         initial={"initial"}
         animate={"visible"}
-        transition={{ type: "spring", stiffness: 120 }}
       >
         Qui nulla dolor eu labore adipisicing officia irure nulla.
       </motion.p>
