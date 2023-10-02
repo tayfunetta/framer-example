@@ -24,6 +24,25 @@ const pVariants = {
   },
 };
 
+const ulVariants = {
+  initial: {
+    y: "-100vh",
+  },
+  visible: {
+    y: 0,
+    transition: { staggerChildren: 0.1, when: "beforeChildren" },
+  },
+};
+
+const liVariants = {
+  initial: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+
 export default function Home() {
   return (
     <div className="bg-black h-screen text-white overflow-hidden">
@@ -43,6 +62,25 @@ export default function Home() {
       >
         Qui nulla dolor eu labore adipisicing officia irure nulla.
       </motion.p>
+
+      <motion.ul
+        className="w-80 mx-auto"
+        variants={ulVariants}
+        initial="initial"
+        animate="visible"
+      >
+        <motion.li variants={liVariants}>aaa</motion.li>
+        <motion.li variants={liVariants}>aaa</motion.li>
+        <motion.li variants={liVariants}>aaa</motion.li>
+        <motion.li variants={liVariants}>aaa</motion.li>
+        <motion.li variants={liVariants}>aaa</motion.li>
+      </motion.ul>
+
+      <motion.div
+        className="mt-[7rem] bg-teal-600 w-36 h-36 rounded-full"
+        animate={{ x: 700 }}
+        transition={{ type: "spring", damping: 13 }}
+      />
     </div>
   );
 }
