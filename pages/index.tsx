@@ -1,14 +1,15 @@
-import { motion, animate } from "framer-motion";
+import Layout from "@/components/Layout";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-black h-screen text-white pt-20">
-      <motion.h1
-        className="text-center text-4xl"
-        animate={{ fontSize: "52px", color: "hsl(120, 100, 50)", x: 100, y: 100 }}
-      >
-        Hello World HOO HOO
-      </motion.h1>
-    </div>
+    <Layout>
+      <div>
+        <div className="w-80 mx-auto text-center text-4xl bg-red-300">
+          <h2>Hello World HOO HOO</h2>
+          <Link href="/about">go to about page</Link>
+        </div>
+      </div>
+    </Layout>
   );
 }
