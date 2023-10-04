@@ -8,7 +8,12 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     // if you specify "wait" as the mode, the entering animation will not start until the exiting animation has finished.
     // if you specify "popLayout", the entering animation will start immediately, without waiting for the exiting animation to finish.
-    <AnimatePresence mode="wait" initial={false}>
+    // you can specify a callback function which will be invoked when exiting animation is completed
+    <AnimatePresence
+      mode="wait"
+      initial={false}
+      onExitComplete={() => console.log("exit completed")}
+    >
       <motion.div
         key={router.route}
         initial={{
