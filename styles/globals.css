@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#toggle-container[data-toggle="true"] {
+  @apply justify-end;
+}
+
+#toggle-container2[data-toggle="true"] {
+  @apply w-56 h-32;
+}
