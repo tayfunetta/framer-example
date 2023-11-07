@@ -23,16 +23,16 @@ export default function Home() {
       </motion.button>
 
       <ul className="w-80 mx-auto text-xl relative top-80">
-        <motion.li className="mb-3" whileHover={{ scale: 1.1, originY: 0.3 }}>
+        <motion.li className="mb-3" whileHover={{ scale: 1.25, originX: 0 }}>
           Bear
         </motion.li>
-        <motion.li className="mb-3" whileHover={{ scale: 1.1, originY: 0.3 }}>
+        <motion.li className="mb-3" whileHover={{ scale: 1.25, originX: 0 }}>
           Monkey
         </motion.li>
-        <motion.li className="mb-3" whileHover={{ scale: 1.1, originY: 0.3 }}>
+        <motion.li className="mb-3" whileHover={{ scale: 1.25, originX: 0 }}>
           Elephant
         </motion.li>
-        <motion.li className="mb-3" whileHover={{ scale: 1.1, originY: 0.3 }}>
+        <motion.li className="mb-3" whileHover={{ scale: 1.25, originX: 0 }}>
           Hawk
         </motion.li>
       </ul>
